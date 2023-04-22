@@ -1,0 +1,15 @@
+## Methods and Interface
+
+- [Methods](0-methods.go)
+- [Methods cont'd](1-methods.go)
+- [Pointer receiver](2-pointer-receiver.go)
+- [Interface](3-interface.go)
+- [Interface are satisfied implicitly](4-interface-are-satisfied-implicitly.go)
+- [Empty interface](5-empty-interface.go)
+- [Type assertion](6-type-assertion.go)
+- [Type switch](7-type-switch.go)
+- [Stringers](8-stringers.go)
+- [Stringers cont'd](9-stringers.go)
+- [Errors](10-errors.go)
+- [Errors cont'd](11-errors.go)
+- [Reader](12-reader.go)
