@@ -1,0 +1,35 @@
+package main
+
+import (
+	"fmt"
+	"sync"
+)
+
+var mu = sync.RWMutex{}
+var wg = sync.WaitGroup{}
+var counter = 0
+
+
+func main() {
+	
+	for i := 0; i < 10; i++ {
+		wg.Add(2)
+		mu.RLock()
+		go sayHello()
+		mu.Lock()
+		go increment()
+	}
+	wg.Wait()
+}
+
+func sayHello() {
+	fmt.Printf("hello %v\n", counter)
+	mu.RUnlock()
+	wg.Done()
+}
+
+func increment() {
+	counter++
+	mu.Unlock()
+	wg.Done()
+} 
